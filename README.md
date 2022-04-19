@@ -30,31 +30,20 @@ https://www.kaggle.com/datasets/andrewmvd/fetal-health-classification
 
 ## Data Cleaning
 
-After collecting data, I performed several steps to clean and refine the data to prepare for further processing and model building. I went through the following steps to clean and prepare the data:
-
-* Parsed the brand name out of the general product information collected from the listings
-
-* Created Liquid Cooled and Bluetooth attributes by parsing the product information for if it contained the capability for these features
-
-* Coalesced the processor types written differently to be uniform across the data and removed any outliers 
-
-* Reformatted the price, number of ratings, and avg. ratings columns to be appropriate numeric values. Dropped rows that had no price target variable
-
-* Reformatted and rescaled Processor speed, RAM, and disk size to numeric values and scaled each attribute to GB
-
-*   Removed outliers from the data that had very extreme value using <b>Z-Score</b>
-
-* Ordinally encoded processor tpyes and dropped the records that were extremely underrepresented
-
-* Created dummy variables for the brands of the computers that were not extremely underrepresented
+Since the data was already thoroughly cleaned upon obtaining the dataset, there is very minimal cleaning tasks carried out in this particular project. I did perform some outlier detection, but chose to include any existing outliers as they could be important towards the analysis given the size of the dataset and the integrity of how the data was collected.
 
 ## EDA
-Some noteable findings from performing exploratory data analysis can be seen below. When going from a low to more high-end processor, the price of a computer does indeed increase. The same applies to RAM. In addition, I noticed some brands were priced higher even with similar or lower amounts of disk space. I eventually found that just as big of a driver in price was the brand of a computer, and not only the specs.
+Some key findings including an example of a test datapoint being classified in using Flask is included below. I noticed that there was a consistent heartrate baseline for pathological records having higher prolonged decelerations. You can then see for higher values of prolonged decelerations (far right column) in the pairplot, there are lower values for accelerations and uterine contractions in general than normal records. 
 
-![alt text](https://github.com/elayer/Amazon-Computer-Project/blob/main/price-by-processor-type.png "Processor Type Boxplots")
-![alt text](https://github.com/elayer/Amazon-Computer-Project/blob/main/price-histogram.png "Price Distribution")
-![alt text](https://github.com/elayer/Amazon-Computer-Project/blob/main/price-by-RAM-boxplots.png "RAM Boxplots")
-![alt text](https://github.com/elayer/Amazon-Computer-Project/blob/main/price-to-brand-lmplots.png "RAM vs. Price per Brand")
+I also include the separation identified by PCA and how these distinctions in the cardiotocography exam metrics can be used to identify whether a datapoint is normal or pathological. In addition, there is also the application of LDA which results in a 2D visual where the three class distinctions can be seen between the linear discriminants. 
+
+Lastly, I include a picture from the flask endpoint constructed, where an appropriate set of data corresponding to each attribute used in the model can be used to make a prediction on whether a record is normal, suspect, or pathological.
+
+![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/prolonged-to-baseline.png "Baseline Heartrate to Prolonged Decelerations")
+![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/pairplot-pathological-pattern.png "Pairplot for Pathological Patterns")
+![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/pca-patterns.png "PCA Patterns")
+![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/lda-visual.png "LDA Visual")
+![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/data-prediction-example.png "Test Data Prediction Example")
 
 ## Model Building
 Before building any models, I transformed the categorical variables into appropriate numeric types. I transformed brand into dummy variables since some of the more expensive computers were similar in distribution of price, and the same goes for less expensive computers. I then ordinally encoded the processor types since each type seemed to have a steady increase in price as you improved the quality of the processor.
