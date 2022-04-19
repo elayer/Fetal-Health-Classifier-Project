@@ -81,7 +81,7 @@ The Random Forest and CatBoost classifier models had the best two performances, 
 
 * CatBoost Classifier F1 Score: 95.06%, Accuracy: 95.06%
 
-I used Optuna with XGBoost and CatBoost to build an optimized model since these algorthms include a myriad of attributes to test in model building.
+I used Optuna with XGBoost and CatBoost to build an optimized model since these algorthms include a myriad of attributes to test when trying to optimize them (hyperparameters).
 
 ## Productionization
 I lasted created a Flask API hosted on a local webserver. For this step I primarily followed the productionization step from the YouTube tutorial series found in the refernces above. This endpoint could be used to access, given cardiotocography exam results, a prediction for whether that pregnancy has normal health conditions or a pathological concern.
