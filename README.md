@@ -2,18 +2,18 @@
 
 * Created a model to classify for babies in fetal development, cardiotocography exams on whether the fetus has normal health conditions, is suspect of having some pathology, or has some pathological condition.  
 
-* Engineered new features utilizing Linear Discriminant Analysis 
+* Engineered new features utilizing Linear Discriminant Analysis and KMeans Clustering. I also performed PCA to orchestrate further and visualize further class separability, but chose not to include the components as features due to the number of components and potential overfitting (could attempt to build new models with them in the future however, if I come back to this project).
 
-* Began model building with Linear, Lasso, Ridge, and ElasticNet linear models, as well Random Forest regression. Then, built optimized models using Optuna with XGBoost and CatBoost regression 
+* Began model building with Support Vector Machine, K-Nearest Neighbors, Logistic Regression, Random Forest Classifier, and AdaBoost Classifier. I then used optuna for hyperparameter optmimization with XGBoost Classifier and CatBoost Classifier.
 
-* Created an API for potential clients using Flask. 
+* Created an API for potential clients using Flask (picture of an example input of data included).
 
 
 ## Code and Resources Used:
 
 **Python Version:** 3.8.5
 
-**Packages:** numpy, pandas, scipy, matplotlib, seaborn, sklearn, xgboost, catboost, sklearn (pca, lda, kmeans, random forest classifier, preprocessing packages)
+**Packages:** numpy, pandas, scipy, matplotlib, seaborn, sklearn, xgboost, catboost, sklearn packages that include but are not limited to: (pca, lda, kmeans, random forest classifier, svm, logisitc regression, various preprocessing and model selection packages), optuna
 
 **Web Framework Requirements Command:** ```pip install -r requirements.txt```
 
@@ -27,20 +27,6 @@ https://en.wikipedia.org/wiki/Cardiotocography#:~:text=Cardiotocography%20(CTG)%
 
 * <b>Disclaimer regarding the data:</b> I did NOT scrape or collect this data myself. The data used for this project was obtained from Kaggle (source in the following link):
 https://www.kaggle.com/datasets/andrewmvd/fetal-health-classification
-
-## Web Scraping:
-
-Created a web scraper using Requests and Beauitful Soup. From each product listing page from Amazon, the following information was obtained:
-*   Brand
-*   Avg. Ratings
-*   Number of Ratings
-*   Processor Type
-*   RAM
-*   Disk Size
-*   Processor Speed
-*   Bluetooth
-*   Liquid Cooled
-*   Price
 
 ## Data Cleaning
 
