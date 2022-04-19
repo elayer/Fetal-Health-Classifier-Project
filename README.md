@@ -46,26 +46,34 @@ Lastly, I include a picture from the flask endpoint constructed, where an approp
 ![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/data-prediction-example.png "Test Data Prediction Example")
 
 ## Model Building
-Before building any models, I transformed the categorical variables into appropriate numeric types. I transformed brand into dummy variables since some of the more expensive computers were similar in distribution of price, and the same goes for less expensive computers. I then ordinally encoded the processor types since each type seemed to have a steady increase in price as you improved the quality of the processor.
+Before building any models, I included the linear discriminants from my LDA application as well as clusters created from applying KMeans Clustering to the dataset as new features. I then scaled the data using MinMaxScaler for the Support Vector Machine implementation, and StandardScaler for all other models attempted. 
 
-I first tried a few different linear models and some variations of them:
+* I began model testing with the Support Vector Machine, since we are interested in creating an optimal class seperability, and then attempted K-Nearest Neighbors and Logistic Regression to compare it with these different algorithms. Oddly enough, the models performed better without stratification, but in practice, it may be more beneficial and conducive to practicality to stratify the the testing data since there were more normal records than pathological records. 
 
-* starting with Linear regression, and then trying Lasso, Ridge, and ElasticNet to see if the results would change since we have many binary columns. 
+* This then led me to try Random Forest and AdaBoost Classifier in tandem with StratifiedKFold to ensure balanced classes while training. The Random Forest Classifier performed better on all folds.
 
-* This then led me to try Random Forest, XGBoost, and CatBoost regression because of the sparse binary/categorical nature of most of the attributes in the data. 
+* I then concluded using optuna with XGBoost and CatBoost Classifiers. As expected, the CatBoost Classifier yielded the best results out of all the models attempted. 
+
+(<i>As a potential point to try in the future, I wonder how well the models would perform if including some newly sampled data to balance the records on the class targets. SMOTE is a potential method to perform this</i>).
 
 ## Model Performance
-The Random Forest, XGBoost, and CatBoost regression models respectively had imrpoved performances. These models considerably outperformed the linear regression models I tried previously. Below are the R2 score values for the models:
+The Random Forest and CatBoost classifier models had the best two performances, with CatBoost being the top model. These models performed a little better over the previous models of Support Vector Machine, K-Nearest Neighbors, and Logistic Regression Models attempted. Below are the recorded <b>Weighted F1 Scores and Accuracies</b> for each of the models performed:
 
-* Linear Regression: 72.28 (the best of the linear models)
+* Support Vector Machine F1 Score: 91%, Accuracy: 91.54%
 
-* Random Forest Regression: 83.76
+* K-Nearest Neighbors F1 Score: 92%, Accuracy: 92.11%
 
-* XGBoost Regression: 85.38
+* Logistic Regression F1 Score: 91%, Accuracy: 90.60%
 
-* CatBoost Regression: 85.87
+* Random Forest Classifier F1 Score: 94.40%, Accuracy: 94.40%
 
-I used Optuna with XGBoost and CatBoost to build an optimized model especially with the various attributes that these algorithms have.
+* AdaBoost Classifier F1 Score: 84.24%, Accuracy: 84.24%
+
+* XGBoost Classifier F1 Score: 92.24%, Accuracy: 92% 
+
+* CatBoost Classifier F1 Score: 95.06%, Accuracy: 95.06%
+
+I used Optuna with XGBoost and CatBoost to build an optimized model since these algorthms include a myriad of attributes to test in model building.
 
 ## Productionization
-I lasted created a Flask API hosted on a local webserver. For this step I primarily followed the productionization step from the YouTube tutorial series found in the refernces above. This endpoint could be used to take in certain aspects of a computer, make appropriate transformations to the variables, and return a predicted price for a computer.  
+I lasted created a Flask API hosted on a local webserver. For this step I primarily followed the productionization step from the YouTube tutorial series found in the refernces above. This endpoint could be used to access, given cardiotocography exam results, a prediction for whether that pregnancy has normal health conditions or a pathological concern.
