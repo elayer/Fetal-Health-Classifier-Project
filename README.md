@@ -42,7 +42,9 @@ Lastly, I include a picture from the flask endpoint constructed, where an approp
 Target Labels can be translated as follows (according to the data source, each record was labelled by three Obstetritians):
 
 <b>1.0 -> Normal</b>
+
 <b>2.0 -> Suspect</b>
+
 <b>3.0 -> Pathological</b>
 
 ![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/prolonged-to-baseline.png "Baseline Heartrate to Prolonged Decelerations")
