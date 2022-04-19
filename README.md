@@ -1,10 +1,8 @@
-## Amazon Gaming Computer Price Estimator - Overview:
+## Fetal Health Condition Classifier - Overview:
 
-* Created a model to help those looking to buy a gaming computer from Amazon make a more informed decision based on the specs of a computer.
+* Created a model to classify for babies in fetal development, cardiotocography exams on whether the fetus has normal health conditions, is suspect of having some pathology, or has some pathological condition.  
 
-* Scraped roughly 200 pages of gaming desktop product listing information from Amazon. 
-
-* Engineered a few features based on the product information included in the title of a product listing. Such as features for liquid cooling and bluetooth capability.
+* Engineered new features utilizing Linear Discriminant Analysis 
 
 * Began model building with Linear, Lasso, Ridge, and ElasticNet linear models, as well Random Forest regression. Then, built optimized models using Optuna with XGBoost and CatBoost regression 
 
@@ -15,7 +13,7 @@
 
 **Python Version:** 3.8.5
 
-**Packages:** numpy, pandas, scipy, requests, beautiful soup, matplotlib, seaborn, sklearn, xgboost, catboost
+**Packages:** numpy, pandas, scipy, matplotlib, seaborn, sklearn, xgboost, catboost, sklearn (pca, lda, kmeans, random forest classifier, preprocessing packages)
 
 **Web Framework Requirements Command:** ```pip install -r requirements.txt```
 
@@ -24,8 +22,11 @@
 * Various project structure and process elements were learned from Ken Jee's YouTube series: 
 https://www.youtube.com/watch?v=MpF9HENQjDo&list=PL2zq7klxX5ASFejJj80ob9ZAnBHdz5O1t
 
-* CatBoost Regression article: 
-https://towardsdatascience.com/catboost-regression-in-6-minutes-3487f3e5b329
+* Wikipedia article concerning cardiotocography exams and information about them: 
+https://en.wikipedia.org/wiki/Cardiotocography#:~:text=Cardiotocography%20(CTG)%20is%20a%20technique,monitoring%20is%20called%20a%20cardiotocograph
+
+* <b>Disclaimer regarding the data:</b> I did NOT scrape or collect this data. The data used for this project was obtained from Kaggle (source in the following link):
+https://www.kaggle.com/datasets/andrewmvd/fetal-health-classification
 
 ## Web Scraping:
 
