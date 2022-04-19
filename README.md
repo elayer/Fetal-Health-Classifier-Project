@@ -37,7 +37,7 @@ Some key findings including an example of a test datapoint being classified in u
 
 I also include the separation identified by PCA and how these distinctions in the cardiotocography exam metrics can be used to identify whether a datapoint is normal or pathological. In addition, there is also the application of LDA which results in a 2D visual where the three class distinctions can be seen between the linear discriminants. 
 
-Lastly, I include a picture from the flask endpoint constructed, where an appropriate set of data corresponding to each attribute used in the model can be used to make a prediction on whether a record is normal, suspect, or pathological.
+Lastly, I include a picture from the flask endpoint constructed, where an appropriate set of data corresponding to each attribute used in the model can be used to make a prediction on whether a record is normal, suspect, or pathological (the data coming in the list on the <b>top left</b>, and the prediction response coming in the <b>lower right</b>.
 
 ![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/prolonged-to-baseline.png "Baseline Heartrate to Prolonged Decelerations")
 ![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/pairplot-pathological-pattern.png "Pairplot for Pathological Patterns")
