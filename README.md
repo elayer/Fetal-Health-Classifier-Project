@@ -39,6 +39,12 @@ I also include the separation identified by PCA and how these distinctions in th
 
 Lastly, I include a picture from the flask endpoint constructed, where an appropriate set of data corresponding to each attribute used in the model can be used to make a prediction on whether a record is normal, suspect, or pathological (the data coming in the list on the <b>top left</b>, and the prediction response coming in the <b>lower right</b>.
 
+Target Labels can be translated as follows (according to the data source, each record was labelled by three Obstetritians):
+
+<b>1.0 -> Normal</b>
+<b>2.0 -> Suspect</b>
+<b>3.0 -> Pathological</b>
+
 ![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/prolonged-to-baseline.png "Baseline Heartrate to Prolonged Decelerations")
 ![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/pairplot-pathological-pattern.png "Pairplot for Pathological Patterns")
 ![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/pca-patterns.png "PCA Patterns")
