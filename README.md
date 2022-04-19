@@ -25,7 +25,7 @@ https://www.youtube.com/watch?v=MpF9HENQjDo&list=PL2zq7klxX5ASFejJj80ob9ZAnBHdz5
 * Wikipedia article concerning cardiotocography exams and information about them: 
 https://en.wikipedia.org/wiki/Cardiotocography#:~:text=Cardiotocography%20(CTG)%20is%20a%20technique,monitoring%20is%20called%20a%20cardiotocograph
 
-* <b>Disclaimer regarding the data:</b> I did NOT scrape or collect this data. The data used for this project was obtained from Kaggle (source in the following link):
+* <b>Disclaimer regarding the data:</b> I did NOT scrape or collect this data myself. The data used for this project was obtained from Kaggle (source in the following link):
 https://www.kaggle.com/datasets/andrewmvd/fetal-health-classification
 
 ## Web Scraping:
