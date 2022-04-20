@@ -8,7 +8,7 @@
 
 * Created an API for potential clients using Flask (picture of an example input of data included).
 
-* <b>UPDATE:</b> I recently uploaded and included results when implementing artifical data using SMOTE. Using this algorithm greatly enchanced evaluation metrics, but in a practical setting, we have to keep in mind this is artificial data and may not be completely representtative of real-world data.
+* <b>UPDATE:</b> I recently uploaded and included results when implementing artifical data using SMOTE. Using this algorithm greatly enchanced evaluation metrics, but in a practical setting, we have to keep in mind this is artificial data and may not be completely representtative of real-world data. The current flask still uses the CatBoost model without SMOTE.
 
 
 ## Code and Resources Used:
