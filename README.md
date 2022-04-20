@@ -8,6 +8,8 @@
 
 * Created an API for potential clients using Flask (picture of an example input of data included).
 
+* <b>UPDATE:</b> I recently uploaded and included results when implementing artifical data using SMOTE. Using this algorithm greatly enchanced evaluation metrics, but in a practical setting, we have to keep in mind this is artificial data and may not be completely representtative of real-world data.
+
 
 ## Code and Resources Used:
 
@@ -37,7 +39,7 @@ Some key findings including an example of a test datapoint being classified in u
 
 I also include the separation identified by PCA and how these distinctions in the cardiotocography exam metrics can be used to identify whether a datapoint is normal or pathological. In addition, there is also the application of LDA which results in a 2D visual where the three class distinctions can be seen between the linear discriminants. 
 
-Lastly, I include a picture from the flask endpoint constructed, where an appropriate set of data corresponding to each attribute used in the model can be used to make a prediction on whether a record is normal, suspect, or pathological (the data coming in the list on the <b>top left</b>, and the prediction response coming in the <b>lower right</b>.
+<b>Update:</b> I include a graph of the ROC AUC Curve scores for the CatBoost Classifier using the SMOTE algorithm data included.
 
 Target Labels can be translated as follows (according to the data source, each record was labelled by three Obstetritians):
 
@@ -51,7 +53,7 @@ Target Labels can be translated as follows (according to the data source, each r
 ![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/pairplot-pathological-pattern.png "Pairplot for Pathological Patterns")
 ![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/pca-patterns.png "PCA Patterns")
 ![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/lda-visual.png "LDA Visual")
-![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/data-prediction-example.png "Test Data Prediction Example")
+![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/catboost-roc.png "CatBoost ROC AUC Score")
 
 ## Model Building
 Before building any models, I included the linear discriminants from my LDA application as well as clusters created from applying KMeans Clustering to the dataset as new features. I then scaled the data using MinMaxScaler for the Support Vector Machine implementation, and StandardScaler for all other models attempted. 
@@ -67,19 +69,19 @@ Before building any models, I included the linear discriminants from my LDA appl
 ## Model Performance
 The Random Forest and CatBoost classifier models had the best two performances, with CatBoost being the top model. These models performed a little better over the previous models of Support Vector Machine, K-Nearest Neighbors, and Logistic Regression Models attempted. Below are the recorded <b>Weighted F1 Scores and Accuracies</b> for each of the models performed:
 
-* Support Vector Machine F1 Score: 91%, Accuracy: 91.54%
+* Support Vector Machine F1 Score: 91%, Accuracy: 91.54% --- <i>with SMOTE</i> F1 Score: 96%, Accuracy: 96.46%
 
-* K-Nearest Neighbors F1 Score: 92%, Accuracy: 92.11%
+* K-Nearest Neighbors F1 Score: 92%, Accuracy: 92.11% --- <i>with SMOTE</i> F1 Score: 98%, Accuracy: 97.91%
 
-* Logistic Regression F1 Score: 91%, Accuracy: 90.60%
+* Logistic Regression F1 Score: 91%, Accuracy: 90.60% --- <i>with SMOTE</i> F1 Score: 87%, Accuracy: 86.71%
 
-* Random Forest Classifier F1 Score: 94.40%, Accuracy: 94.40%
+* Random Forest Classifier F1 Score: 94.40%, Accuracy: 94.40% --- <i>with SMOTE</i> F1 Score: 97.82%, Accuracy: 97.82%
 
-* AdaBoost Classifier F1 Score: 84.24%, Accuracy: 84.24%
+* AdaBoost Classifier F1 Score: 84.24%, Accuracy: 84.24% --- <i>with SMOTE</i> F1 Score: 85.80%, Accuracy: 85.80%
 
-* XGBoost Classifier F1 Score: 92.24%, Accuracy: 92% 
+* XGBoost Classifier F1 Score: 92.24%, Accuracy: 92% --- <i>with SMOTE</i> F1 Score: 97.48%, Accuracy: 97%
 
-* CatBoost Classifier F1 Score: 95.06%, Accuracy: 95.06%
+* CatBoost Classifier F1 Score: 95.06%, Accuracy: 95.06% --- <i>with SMOTE</i> F1 Score: 98.99%, Accuracy: 98.99%
 
 I used Optuna with XGBoost and CatBoost to build an optimized model since these algorthms include a myriad of attributes to test when trying to optimize them (hyperparameters).
 
