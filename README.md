@@ -10,7 +10,7 @@
 
 * <b>UPDATE:</b> I recently uploaded and included results when implementing artifical data using SMOTE. Using this algorithm greatly enchanced evaluation metrics, but in a practical setting, we have to keep in mind this is artificial data and may not be completely representtative of real-world data. The current flask still uses the CatBoost model without SMOTE.
 
-The pickled model containing the SMOTE balanced data of the CatBoost Classifier is too large to upload to GitHub. Therefore, that model will have to remain local for the time being.
+The pickled model containing the SMOTE balanced data of the CatBoost Classifier is too large to upload to GitHub. Therefore, that model will have to remain local for the time being. If you would like access to the model file, feel free to contact me.
 
 
 ## Code and Resources Used:
