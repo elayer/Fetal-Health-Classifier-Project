@@ -93,4 +93,4 @@ I lasted created a Flask API hosted on a local webserver. For this step I primar
 <b>UPDATE:</b> Below is an example prediction using the Flask API:
 
 ![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/fetal_homepage.png "Website Homepage")
-![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/catboost-roc.png "CatBoost ROC AUC Score")
+![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/fetal_prediction.png "Website Prediction Page")
