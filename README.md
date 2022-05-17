@@ -89,3 +89,8 @@ I used Optuna with XGBoost and CatBoost to build an optimized model since these 
 
 ## Productionization
 I lasted created a Flask API hosted on a local webserver. For this step I primarily followed the productionization step from the YouTube tutorial series found in the refernces above. This endpoint could be used to access, given cardiotocography exam results, a prediction for whether that pregnancy has normal health conditions or a pathological concern.
+
+<b>UPDATE:</b> Below is an example prediction using the Flask API:
+
+![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/fetal_homepage.png "Website Homepage")
+![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/catboost-roc.png "CatBoost ROC AUC Score")
