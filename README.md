@@ -96,4 +96,4 @@ I lasted created a Flask API hosted on a local webserver. For this step I primar
 ![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/fetal_prediction.png "Website Prediction Page")
 
 ## Future Improvements
-In the case we do not wish to use artificial data, we can simply remove the SMOTE implementation and stratify the dependent variable when splitting the data into train and test sets. From here, we can run the models as we did above knowing the data is genuine.
+In the case we do not wish to use artificial data, we can simply remove the SMOTE implementation and stratify the dependent variable when splitting the data into train and test sets. From here, we can run the same models knowing the data is genuine.
