@@ -97,3 +97,5 @@ I lasted created a Flask API hosted on a local webserver. For this step I primar
 
 ## Future Improvements
 In the case we do not wish to use artificial data, we can simply remove the SMOTE implementation and stratify the dependent variable when splitting the data into train and test sets. From here, we can run the same models knowing the data is genuine.
+
+5/27/2022: Applying LDA using scaled data instead of unscaled data.
