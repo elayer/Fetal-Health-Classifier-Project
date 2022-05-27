@@ -54,8 +54,8 @@ Target Labels can be translated as follows (according to the data source, each r
 ![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/prolonged-to-baseline.png "Baseline Heartrate to Prolonged Decelerations")
 ![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/pairplot-pathological-pattern.png "Pairplot for Pathological Patterns")
 ![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/pca-patterns.png "PCA Patterns")
-![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/lda-visual.png "LDA Visual")
-![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/catboost-roc.png "CatBoost ROC AUC Score")
+![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/lda-visual_updated.png "LDA Visual")
+![alt text](https://github.com/elayer/Fetal-Health-Classifier-Project/blob/main/catboost-roc_updated.png "CatBoost ROC AUC Score")
 
 ## Model Building
 Before building any models, I included the linear discriminants from my LDA application as well as clusters created from applying KMeans Clustering to the dataset as new features. I then scaled the data using MinMaxScaler for the Support Vector Machine implementation, and StandardScaler for all other models attempted. 
